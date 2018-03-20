@@ -1,0 +1,25 @@
+# This docker-compose file is for development
+# and is based on the following guide:
+# http://mherman.org/blog/2017/12/07/dockerizing-a-react-app/#.WqLTTejwaUl
+# The page also contains a version for prod
+version: "3.5"
+
+services:
+  presence-bot-web-app:
+    container_name: presence-bot-web-app
+    build: ../presence-bot-web-app
+    volumes:
+      - ../presence-bot-web-app:/app
+    ports:
+      - 3000:3000
+      - 35729:35729
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+  presence-bot-rest-api:
+    build: ../presence-bot-rest-api
+    ports:
+      - 4000:8080
+    environment:
+      - SESSION_SECRET
+      - DB_CONNECTION

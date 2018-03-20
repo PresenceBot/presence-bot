@@ -7,6 +7,11 @@
   "author": "Alex Babis <acbabis@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "eslint": "^4.19.0",
     "simple-git": "^1.92.0"
+  },
+  "scripts": {
+    "install": "node install.js",
+    "start": "docker-compose up --build -d"
   }
 }
