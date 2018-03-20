@@ -1,0 +1,12 @@
+{
+  "name": "presence-bot",
+  "version": "0.0.0",
+  "description": "Home repo for boostrapping, deploying, managing, and documenting PresenceBot application",
+  "main": "install.js",
+  "repository": "https://github.com/PresenceBot/presence-bot.git",
+  "author": "Alex Babis <acbabis@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "simple-git": "^1.92.0"
+  }
+}
